@@ -1,0 +1,62 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miraculous Draft</title>
+    <link rel="stylesheet" href="kwami.css">
+</head>
+<body>
+
+<div class="background">
+
+    <div class="header">
+        <h1>Miraculous Draft</h1>
+        <h2 id="turnText">✨ PLAYER 1 SELECTING ✨</h2>
+        <p id="pickInfo">Pick 1 of 6</p>
+    </div>
+
+    <div class="players">
+
+        <div class="playerBox">
+            <h2 id="player1" class="active">PLAYER 1</h2>
+
+            <div class="selectedArea">
+                <div class="slot" id="p1slot1"></div>
+                <div class="slot" id="p1slot2"></div>
+                <div class="slot" id="p1slot3"></div>
+            </div>
+        </div>
+
+        <div class="versus">
+            <h1>VS</h1>
+        </div>
+
+        <div class="playerBox">
+            <h2 id="player2">PLAYER 2</h2>
+
+            <div class="selectedArea">
+                <div class="slot" id="p2slot1"></div>
+                <div class="slot" id="p2slot2"></div>
+                <div class="slot" id="p2slot3"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div id="cardContainer" class="cardContainer">
+
+        <!-- Cards will be generated automatically by kwami.js -->
+
+    </div>
+
+</div>
+
+<script src="kwami.js"></script>
+
+</body>
+</html>
+```

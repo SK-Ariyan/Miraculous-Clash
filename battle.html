@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Battle</title>
+    <link rel="stylesheet" href="battle.css">
+</head>
+<body>
+<div id="gameContainer">
+
+    <div id="topBar">
+
+        <h1 id="turnDisplay">PLAYER 1 TURN</h1>
+
+    </div>
+
+    <div id="battleArea">
+
+        <!-- Player 1 -->
+        <div class="player-panel">
+
+            <h2>PLAYER 1</h2>
+
+            <div class="healthContainer">
+
+    <div class="healthBar">
+
+        <div id="player1HealthFill" class="healthFill"></div>
+
+    </div>
+
+    <div id="player1HP" class="healthText"></div>
+
+</div>
+            <div id="player1Shield" class="shield"></div>
+            <div id="player1Status" class="statusEffects"></div>
+
+            <img id="player1Sprite">
+
+            <div class="kwamis" id="player1Kwamis"></div>
+
+        </div>
+
+        <!-- Battlefield -->
+        <div id="middleArea">
+
+            <div id="battlefield">
+
+    <div id="player1Effects"></div>
+
+    <div class="vsText">VS</div>
+
+    <div id="player2Effects"></div>
+
+</div>
+
+        <!-- Player 2 -->
+        <div class="player-panel">
+
+            <h2>PLAYER 2</h2>
+
+            <div class="healthContainer">
+
+    <div class="healthBar">
+
+        <div id="player2HealthFill" class="healthFill"></div>
+
+    </div>
+
+    <div id="player2HP" class="healthText"></div>
+
+</div>
+            <div id="player2Shield" class="shield"></div>
+            <div id="player2Status" class="statusEffects"></div>
+
+            <img id="player2Sprite">
+
+            <div class="kwamis" id="player2Kwamis"></div>
+
+        </div>
+
+    </div>
+
+    <div id="bottomPanel">
+
+        <div id="abilitySection">
+
+            <h2>Abilities</h2>
+
+            <div id="abilityPanel"></div>
+
+            <button id="normalAttack">
+                ⚔ Normal Attack
+            </button>
+
+        </div>
+
+        <div id="battleLog">
+
+            <h2>Battle Log</h2>
+
+            <div id="log">
+                Battle Started!
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="battle.js"></script>
+
+</body>
+
+</html>
