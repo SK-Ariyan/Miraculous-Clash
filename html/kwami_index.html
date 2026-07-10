@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miraculous Encyclopedia</title>
+    <link rel="stylesheet" href="../css/kwami_index.css">
+<link rel="stylesheet" href="../css/transition.css">
+</head>
+<body>
+
+<div id="fadeScreen"></div>
+
+<button id="backBtn">⬅ Back</button>
+
+<div class="container">
+
+<h1>📖 Miraculous Encyclopedia</h1>
+
+<div class="navigation">
+
+<button id="prevBtn">⬅</button>
+
+<h2 id="kwamiName">Tikki</h2>
+
+<button id="nextBtn">➡</button>
+
+</div>
+
+<img id="kwamiImage">
+
+<button id="favoriteBtn">⭐ Set as Favorite</button>
+
+<h3 id="kwamiTitle"></h3>
+
+<div class="section">
+
+<h2>✨ Active</h2>
+
+<h3 id="activeName"></h3>
+
+<p id="activeEffect"></p>
+
+</div>
+
+<div class="section">
+
+<h2>⭐ Passive</h2>
+
+<p id="passiveEffect"></p>
+
+</div>
+
+<div class="section">
+
+    <h2 id="partnerHeading">❤️ Synergy</h2>
+
+    <img id="partnerImage">
+
+    <h3 id="partnerName"></h3>
+
+    <h4 id="partnerTitle"></h4>
+
+    <p id="partnerDescription"></p>
+
+</div>
+
+<div class="section">
+
+<h2>📊 Stats</h2>
+
+<p id="stats"></p>
+
+</div>
+
+<div id="kwamiStrip"></div>
+
+</div>
+
+<audio id="themePlayer"></audio>
+
+<script>
+    document.getElementById("backBtn").onclick = ()=>{
+
+    goTo("lobby.html");
+
+};
+</script>
+<script src="../js/transition.js"></script>
+<script src="../js/music.js"></script>
+<script src="../js/kwamis_data.js"></script>
+<script src="../js/kwami_index.js"></script>
+</body>
+</html>

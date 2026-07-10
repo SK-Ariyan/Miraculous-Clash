@@ -1,0 +1,436 @@
+/* ========================= */
+/* Reset */
+/* ========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",sans-serif;
+}
+
+/* ========================= */
+/* Body */
+/* ========================= */
+
+body{
+
+    width:100vw;
+    height:100vh;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(rgba(0,0,0,.18),rgba(0,0,0,.30)),
+    url("../photos/lobbyBG.png");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    color:white;
+
+}
+
+/* ========================= */
+/* Fade */
+/* ========================= */
+
+#fadeScreen{
+
+    position:fixed;
+
+    inset:0;
+
+    background:black;
+
+    opacity:1;
+
+    transition:opacity 1.5s;
+
+    pointer-events:none;
+
+    z-index:9999;
+
+}
+
+#fadeScreen.fadeIn{
+
+    opacity:0;
+
+}
+
+/* ========================= */
+/* Back */
+/* ========================= */
+
+#backBtn{
+
+    position:absolute;
+
+    top:20px;
+    left:20px;
+
+    padding:12px 22px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#222;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    z-index:20;
+
+}
+
+#backBtn:hover{
+
+    background:#d63031;
+
+    transform:scale(1.05);
+
+}
+
+/* ========================= */
+/* Main */
+/* ========================= */
+
+.overlay{
+
+    width:100%;
+
+    height:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.lobbyPanel{
+
+    width:700px;
+
+    max-height:95vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+}
+
+/* ========================= */
+/* Title */
+/* ========================= */
+
+.gameTitle{
+
+    font-size:52px;
+
+    text-align:center;
+
+    text-shadow:
+
+    0 0 8px crimson,
+
+    0 0 20px red,
+
+    0 0 40px gold;
+
+}
+
+.subTitle{
+
+    font-size:22px;
+
+    text-align:center;
+
+}
+
+/* ========================= */
+/* Profile */
+/* ========================= */
+
+.profileSection{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+.avatar{
+
+    width:170px;
+
+    height:170px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:5px solid gold;
+
+    box-shadow:
+
+    0 0 20px gold;
+
+}
+
+#playerName{
+
+    font-size:32px;
+
+}
+
+.playerStats{
+
+    display:flex;
+
+    gap:60px;
+
+    font-size:22px;
+
+}
+
+/* ========================= */
+/* Play */
+/* ========================= */
+
+#playButton{
+
+    width:340px;
+
+    height:75px;
+
+    border:none;
+
+    border-radius:18px;
+
+    cursor:pointer;
+
+    font-size:34px;
+
+    font-weight:bold;
+
+    color:white;
+
+    background:
+
+    linear-gradient(45deg,#ff4d4d,#ffb347);
+
+    transition:.25s;
+
+    box-shadow:
+
+    0 0 25px rgba(255,170,0,.7);
+
+}
+
+#playButton:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:
+
+    0 0 35px gold;
+
+}
+
+/* ========================= */
+/* Favourite */
+/* ========================= */
+
+.favoriteSection{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:14px 24px;
+
+    border-radius:18px;
+
+    background:rgba(0,0,0,.45);
+
+}
+
+.favoriteKwamis{
+
+    display:flex;
+
+    gap:24px;
+
+}
+
+.favoriteKwamis img{
+
+    width:82px;
+
+    height:82px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:3px solid white;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.favoriteKwamis img:hover{
+
+    transform:translateY(-6px) scale(1.08);
+
+    border-color:gold;
+
+}
+
+/* ========================= */
+/* Menu */
+/* ========================= */
+
+.menuRow{
+
+    display:flex;
+
+    gap:18px;
+
+}
+
+.menuRow button{
+
+    width:145px;
+
+    height:80px;
+
+    border:none;
+
+    border-radius:16px;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    color:white;
+
+    background:rgba(0,0,0,.60);
+
+    border:2px solid gold;
+
+    transition:.25s;
+
+}
+
+.menuRow button:hover{
+
+    transform:translateY(-5px);
+
+    background:gold;
+
+    color:black;
+
+}
+
+/* ========================= */
+/* Quote */
+/* ========================= */
+
+.quote{
+
+    font-size:18px;
+
+    font-style:italic;
+
+    text-align:center;
+
+}
+
+/* ========================= */
+/* Version */
+/* ========================= */
+
+.version{
+
+    font-size:18px;
+
+    opacity:.85;
+
+}
+
+#changeFavoriteBtn{
+
+    display:block;
+
+    margin:18px auto 0;
+
+    padding:12px 28px;
+
+    border:none;
+
+    border-radius:30px;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    color:white;
+
+    background:linear-gradient(135deg,#FFD700,#F39C12);
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    box-shadow:0 6px 18px rgba(255,215,0,.35);
+
+}
+
+#changeFavoriteBtn:hover{
+
+    transform:translateY(-3px) scale(1.04);
+
+    box-shadow:0 10px 24px rgba(255,215,0,.5);
+
+}
+
+#changeFavoriteBtn:active{
+
+    transform:scale(.97);
+
+}
+
+#changeFavoriteBtn::before{
+
+    content:"⭐ ";
+
+}

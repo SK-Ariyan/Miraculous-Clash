@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miraculous Battle</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/transition.css">
+</head>
+<body>
+<div id="fadeScreen"></div>
+    <div class="overlay">
+        <button id="playBtn">▶ PLAY</button>
+    </div>
+
+
+    <audio id="bgMusic" loop>
+    <source src="../sounds/BGMS.wav" type="audio/wav">
+</audio>
+    <script>
+const btn = document.getElementById("playBtn");
+const music = document.getElementById("bgMusic");
+const overlay = document.querySelector(".overlay");
+
+btn.addEventListener("click", async () => {
+
+    btn.classList.add("clicked");
+
+    music.volume = 0.2;
+
+    await music.play();
+
+    overlay.classList.add("fadeOut");
+
+    setTimeout(() => {
+
+        goTo("lobby.html");
+
+    }, 2000);
+
+});
+</script>
+    
+<script src="../js/transition.js"></script>
+</body>
+</html>

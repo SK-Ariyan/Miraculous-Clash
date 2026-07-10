@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Settings</title>
+
+<link rel="stylesheet" href="../css/settings.css">
+<link rel="stylesheet" href="../css/transition.css">
+
+</head>
+
+<body>
+
+<div id="fadeScreen"></div>
+
+<button id="backBtn">⬅ Back</button>
+
+<div class="settingsContainer">
+
+    <!-- LEFT COLUMN -->
+    <div class="leftColumn">
+
+        <h1 class="pageTitle">
+            ⚙ SETTINGS
+        </h1>
+
+        <!-- AUDIO -->
+        <div class="card">
+
+            <h2>🔊 Audio</h2>
+
+            <div class="setting">
+
+                <label>Master Volume</label>
+
+                <input
+                type="range"
+                id="masterVolume"
+                min="0"
+                max="100"
+                value="100">
+
+            </div>
+
+            <div class="setting">
+
+                <label>Music Volume</label>
+
+                <input
+                type="range"
+                id="musicVolume"
+                min="0"
+                max="100"
+                value="80">
+
+            </div>
+
+            <div class="setting">
+
+                <label>SFX Volume</label>
+
+                <input
+                type="range"
+                id="sfxVolume"
+                min="0"
+                max="100"
+                value="100">
+
+            </div>
+
+        </div>
+
+        <!-- GAMEPLAY -->
+        <div class="card">
+
+            <h2>🎮 Gameplay</h2>
+
+            <label class="checkbox">
+
+                <input
+                type="checkbox"
+                id="autoMusic"
+                checked>
+
+                Auto Play Music
+
+            </label>
+
+            <label class="checkbox">
+
+                <input
+                type="checkbox"
+                id="transitionToggle"
+                checked>
+
+                Enable Transitions
+
+            </label>
+
+        </div>
+
+        <!-- THEME -->
+        <div class="card">
+
+            <h2>🎨 Theme</h2>
+
+            <button class="themeBtn">Miraculous</button>
+
+            <button class="themeBtn">Dark</button>
+
+            <button class="themeBtn">Light</button>
+
+        </div>
+
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="rightColumn">
+
+        <!-- PROFILE -->
+        <div class="card profileCard">
+
+            <img
+                id="profileAvatar"
+                src=""
+                class="profileAvatar"
+                alt="Player Avatar">
+
+            <h2 id="profileName">
+                
+            </h2>
+
+        </div>
+
+        <!-- MUSIC PLAYER -->
+        <div class="card musicCard">
+
+            <h2>🎵 Now Playing</h2>
+
+            <p id="musicTitle">
+                Lobby Theme
+            </p>
+
+            <div class="musicButtons">
+
+                <button id="prevMusic">⏮</button>
+
+                <button id="Play">▶</button>
+
+                <button id="pause">⏸</button>
+
+                <button id="nextMusic">⏭</button>
+
+            </div>
+
+            <input
+            type="range"
+            id="musicSeek"
+            min="0"
+            max="100"
+            value="0">
+
+        </div>
+
+        <!-- ABOUT -->
+        <div class="card aboutCard">
+
+            <h2>ℹ About</h2>
+
+            <p>
+                <strong>Miraculous Clash</strong>
+            </p>
+
+            <p>
+                Version 2.0
+            </p>
+
+            <p>
+                Developed by Ariyan
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+<audio id="musicPlayer" loop>
+
+    <source src="../sounds/BGMS.wav" type="audio/wav">
+
+</audio>
+
+<script>
+
+document.getElementById("backBtn").onclick = ()=>{
+
+    goTo("lobby.html");
+
+};
+
+</script>
+
+<script src="../js/transition.js"></script>
+<script src="../js/music.js"></script>
+<script src="../js/heroes.js"></script>
+<script src="../js/info.js"></script>
+<script src="../js/settings.js"></script>
+</body>
+</html>

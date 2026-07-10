@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miraculous Draft</title>
+
+    <link rel="stylesheet" href="../css/kwami.css">
+    <link rel="stylesheet" href="../css/transition.css">
+</head>
+<body>
+<div id="fadeScreen"></div>
+<button id="backBtn">⬅ Back</button>
+<div class="background">
+
+    <div class="header">
+        <h1>Miraculous Draft</h1>
+        <h2 id="turnText">✨ PLAYER 1 SELECTING ✨</h2>
+        <p id="pickInfo">Pick 1 of 6</p>
+    </div>
+
+    <div class="players">
+
+        <!-- PLAYER 1 -->
+        <div class="playerBox">
+
+            <div class="playerStats">
+                ❤️ <span id="player1HPPreview">200</span>
+                &nbsp;&nbsp;
+                ⚔️ <span id="player1DamagePreview">0</span>
+                &nbsp;&nbsp;
+                ⚡ <span id="player1SpeedPreview">0</span>
+            </div>
+
+            <h2 id="player1" class="active">PLAYER 1</h2>
+
+            <div class="selectedArea">
+                <div class="slot" id="p1slot1"></div>
+                <div class="slot" id="p1slot2"></div>
+                <div class="slot" id="p1slot3"></div>
+            </div>
+
+        </div>
+
+        <!-- VS -->
+        <div class="versus">
+            <h1>VS</h1>
+        </div>
+
+        <!-- PLAYER 2 -->
+        <div class="playerBox">
+
+            <div class="playerStats">
+                ❤️ <span id="player2HPPreview">200</span>
+                &nbsp;&nbsp;
+                ⚔️ <span id="player2DamagePreview">0</span>
+                &nbsp;&nbsp;
+                ⚡ <span id="player2SpeedPreview">0</span>
+            </div>
+
+            <h2 id="player2">Opponent</h2>
+
+            <div class="selectedArea">
+                <div class="slot" id="p2slot1"></div>
+                <div class="slot" id="p2slot2"></div>
+                <div class="slot" id="p2slot3"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div id="cardContainer" class="cardContainer">
+        <!-- Cards are generated automatically -->
+    </div>
+
+</div>
+
+<audio id="musicPlayer" loop>
+    <source src="../sounds/BGMS.wav" type="audio/wav">
+</audio>
+<audio id="banSound" preload="auto">
+    <source src="../sounds/ban.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="selectSound" preload="auto">
+    <source src="../sounds/select.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+document.getElementById("backBtn").onclick = ()=>{
+
+    goTo("lobby.html");
+
+};
+
+</script>
+
+
+
+<script src="../js/transition.js"></script>
+<script src="../js/music.js"></script>
+<script src="../js/info.js"></script>
+<script src="../js/kwami.js"></script>
+
+</body>
+</html>

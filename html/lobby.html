@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Miraculous Clash</title>
+
+<link rel="stylesheet" href="../css/lobby.css">
+<link rel="stylesheet" href="../css/transition.css">
+
+</head>
+<body>
+
+<div id="fadeScreen"></div>
+
+<button id="backBtn">⬅ Back</button>
+
+<div class="overlay">
+
+<div class="lobbyPanel">
+
+<h1 class="gameTitle">🐞 MIRACULOUS CLASH 🐈</h1>
+
+<p class="subTitle">
+Create Your Ultimate Kwami Team
+</p>
+
+<div class="profileSection">
+
+<img
+id="playerAvatar"
+class="avatar"
+src="../hero/hero2.jpg"
+>
+
+<h2 id="playerName">
+Player
+</h2>
+
+<div class="playerStats">
+
+<div>
+🏆
+<br>
+<span id="wins">0</span>
+</div>
+
+<div>
+🎮
+<br>
+<span id="games">0</span>
+</div>
+
+</div>
+
+</div>
+
+<button id="playButton">
+
+▶ PLAY
+
+</button>
+
+<div class="favoriteSection">
+
+<h3>
+
+⭐ Favourite Kwamis ⭐
+
+</h3>
+
+<div class="favoriteKwamis">
+
+<img id="fav1" src="">
+
+<img id="fav2" src="">
+
+<img id="fav3" src="">
+
+</div>
+
+<button id="changeFavoriteBtn">
+     Change Favorites
+</button>
+</div>
+
+
+<div class="menuRow">
+
+<button id="infoButton">
+
+📖
+<br>
+Index
+
+</button>
+
+<button id="profileButton">
+
+👤
+<br>
+Profile
+
+</button>
+
+<button id="settingButton">
+
+⚙
+<br>
+Settings
+
+</button>
+
+<button id="creditButton">
+
+❤️
+<br>
+Credits
+
+</button>
+
+</div>
+
+<p class="quote">
+
+"One Kwami can change everything."
+
+</p>
+
+<div class="version">
+
+Version 2.0
+
+</div>
+
+</div>
+
+</div>
+
+<audio id="musicPlayer" loop>
+
+<source src="../sounds/BGMS.wav" type="audio/wav">
+
+</audio>
+
+
+<script src="../js/transition.js"></script>
+<script src="../js/music.js"></script>
+<script src="../js/kwamis_data.js"></script>
+<script src="../js/lobby.js"></script>
+
+</body>
+</html>

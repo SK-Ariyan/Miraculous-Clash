@@ -1,0 +1,406 @@
+/* ===========================
+   GLOBAL
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    width:100vw;
+    height:100vh;
+
+    overflow:hidden;
+
+    font-family:"Segoe UI",sans-serif;
+
+    background:
+    url("../photos/creditsBG.png")
+    center center/cover
+    no-repeat;
+
+    position:relative;
+
+}
+
+/* ===========================
+   Background Overlay
+=========================== */
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+    rgba(0,0,0,.15),
+
+    rgba(0,0,0,.25)
+
+    );
+
+    backdrop-filter:blur(3px);
+
+}
+
+/* ===========================
+   Back Button
+=========================== */
+
+#backBtn{
+
+    position:absolute;
+
+    top:15px;
+    left:15px;
+
+    z-index:100;
+
+    border:none;
+
+    padding:12px 25px;
+
+    border-radius:14px;
+
+    background:#111;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#backBtn:hover{
+
+    transform:translateX(-5px);
+
+    background:#222;
+
+}
+
+/* ===========================
+   Layout
+=========================== */
+
+.creditsContainer{
+
+    position:relative;
+
+    z-index:10;
+
+    width:100%;
+
+    height:100%;
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+/* ===========================
+   Sidebar
+=========================== */
+
+.leftPanel{
+
+    width:30%;
+
+    height:100%;
+
+    background:
+
+    rgba(0,0,0,.82);
+
+    color:white;
+
+    padding:22px 26px;
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-start;
+
+    backdrop-filter:blur(14px);
+
+    border-right:
+
+    2px solid
+
+    rgba(255,255,255,.08);
+
+}
+
+/* ===========================
+   Title
+=========================== */
+
+.leftPanel h1{
+
+    color:#ffd500;
+
+    font-weight:900;
+
+    font-size:28px;
+    margin-top: 60px;
+    margin-bottom:20px;
+
+    letter-spacing:2px;
+
+}
+
+/* ===========================
+   Divider
+=========================== */
+
+.divider{
+
+    width:100%;
+
+    height:1px;
+
+    background:
+
+    rgba(255,215,0,.25);
+
+    margin:10px 0;
+
+}
+
+/* ===========================
+   Sections
+=========================== */
+
+.leftPanel section{
+
+    margin-bottom:2px;
+
+}
+
+.leftPanel h2{
+
+    color:#ffd500;
+
+    font-size:17px;
+    margin-bottom:6px;
+
+}
+
+.leftPanel p{
+
+    color:#f2f2f2;
+
+    
+
+    
+
+    font-size:14px;
+    line-height:1.35;
+    margin-bottom:4px;
+
+
+
+}
+
+/* ===========================
+   Instagram
+=========================== */
+
+#insta{
+
+    color:#f8f5f5;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    
+    text-decoration:none;
+
+
+}
+
+a,
+a:hover,
+a:visited,
+a:active{
+    text-decoration:none;
+}
+
+#insta:hover{
+
+    color:rgb(255, 1, 60);
+
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+footer{
+
+    margin-top:auto;
+    padding-top:10px;
+
+}
+
+.quote{
+
+    font-style:italic;
+
+    color:#ffe680;
+
+    margin-bottom:20px;
+
+}
+
+.copyright{
+
+    color:#999;
+
+    font-size:15px;
+
+}
+
+/* ===========================
+   Particles
+=========================== */
+
+#particles{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:2;
+
+}
+
+/* ===========================
+   Fade Screen
+=========================== */
+
+#fadeScreen{
+
+    position:fixed;
+
+    inset:0;
+
+    background:black;
+
+    opacity:0;
+
+    pointer-events:none;
+
+    z-index:999;
+
+}
+
+/* ===========================
+   Floating Particles
+=========================== */
+
+.particle{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(1px);
+
+    box-shadow:
+
+    0 0 10px currentColor,
+
+    0 0 20px currentColor;
+
+    animation:
+
+    floatParticle linear infinite;
+
+}
+
+/* ===========================
+   Animation
+=========================== */
+
+@keyframes floatParticle{
+
+    0%{
+
+        transform:
+
+        translateY(20px)
+
+        translateX(0px)
+
+        scale(.8);
+
+    }
+
+    25%{
+
+        transform:
+
+        translateY(-150px)
+
+        translateX(20px)
+
+        scale(1);
+
+    }
+
+    50%{
+
+        transform:
+
+        translateY(-300px)
+
+        translateX(-15px)
+
+        scale(.9);
+
+    }
+
+    75%{
+
+        transform:
+
+        translateY(-450px)
+
+        translateX(25px)
+
+        scale(1.1);
+
+    }
+
+    100%{
+
+        transform:
+
+        translateY(-650px)
+
+        translateX(0px)
+
+        scale(.7);
+
+    }
+
+}

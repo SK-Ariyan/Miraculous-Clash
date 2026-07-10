@@ -1,0 +1,411 @@
+/* === GLOBAL RESET & BASE === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../images/lobbyBG.png') center/cover no-repeat fixed;
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:url("../images/lobbyBG.png") center/cover no-repeat;
+
+    filter:blur(2px);
+
+    transform:scale(1.05);
+
+    z-index:-2;
+
+}
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.15); /* slight dark tint */
+
+    z-index:-1;
+
+}
+
+/* Fade Screen */
+#fadeScreen {
+    position: fixed;
+    inset: 0;
+    background: black;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.1s ease;
+}
+
+/* Back Button */
+#backBtn {
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    z-index: 10;
+    background: rgba(20, 20, 30, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#backBtn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateX(-3px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* === MAIN SETTINGS CONTAINER === */
+.settingsContainer {
+    position: relative;
+    z-index: 5;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 30px;
+    width: 90%;
+    max-width: 1200px;
+    max-height: 90vh;
+    margin: 0 20px;
+}
+
+/* === PAGE TITLE === */
+.pageTitle {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 25px;
+    text-shadow: 0 0 30px rgba(100, 180, 255, 0.5);
+    letter-spacing: 5px;
+    background: linear-gradient(135deg, #535353 0%, #a0c4ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* === COLUMNS === */
+.leftColumn, .rightColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+    max-height: 85vh;
+    padding-right: 5px;
+}
+
+/* Hide scrollbar for modern look */
+.leftColumn::-webkit-scrollbar,
+.rightColumn::-webkit-scrollbar {
+    width: 4px;
+}
+
+.leftColumn::-webkit-scrollbar-thumb,
+.rightColumn::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+/* === CARDS === */
+.card {
+    background: rgba(20, 20, 35, 0.6);
+    backdrop-filter: blur(20px) saturate(150%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 25px;
+    color: #e0e0e0;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    background: rgba(25, 25, 45, 0.75);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.card h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+    color: #c0caf5;
+    letter-spacing: 1px;
+}
+
+/* === SETTINGS WITHIN CARDS === */
+.setting {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    gap: 15px;
+}
+
+.setting label {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #b0b8d1;
+    min-width: 130px;
+}
+
+/* === RANGE INPUTS === */
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: linear-gradient(135deg, #7aa2f7, #4a6cf7);
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 15px rgba(74, 108, 247, 0.6);
+    cursor: pointer;
+    transition: transform 0.15s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+/* === CHECKBOXES === */
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.95rem;
+    color: #b0b8d1;
+    cursor: pointer;
+    margin-bottom: 14px;
+    transition: color 0.2s ease;
+}
+
+.checkbox:hover {
+    color: #fff;
+}
+
+.checkbox input {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.checkbox input:checked {
+    background: linear-gradient(135deg, #7aa2f7, #4a6cf7);
+    border-color: transparent;
+    box-shadow: 0 0 15px rgba(74, 108, 247, 0.4);
+}
+
+.checkbox input:checked::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* === THEME BUTTONS === */
+.themeBtn {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #c0caf5;
+    padding: 12px 20px;
+    margin: 5px 5px 5px 0;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.themeBtn:hover {
+    background: rgba(122, 162, 247, 0.2);
+    border-color: rgba(122, 162, 247, 0.5);
+    color: #fff;
+    transform: scale(1.03);
+    box-shadow: 0 5px 20px rgba(74, 108, 247, 0.3);
+}
+
+/* === PROFILE CARD === */
+.profileCard {
+    text-align: center;
+}
+
+.profileAvatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    margin-bottom: 12px;
+    transition: transform 0.3s ease;
+}
+
+.profileAvatar:hover {
+    transform: scale(1.05);
+    border-color: #7aa2f7;
+}
+
+#profileName {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 5px 0;
+}
+
+/* === MUSIC CARD === */
+.musicCard {
+    text-align: center;
+}
+
+#musicTitle {
+    font-size: 1rem;
+    color: #b0b8d1;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.musicButtons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.musicButtons button {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #c0caf5;
+    font-size: 1.2rem;
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.musicButtons button:hover {
+    background: rgba(122, 162, 247, 0.25);
+    border-color: rgba(122, 162, 247, 0.5);
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* === ABOUT CARD === */
+.aboutCard p {
+    font-size: 0.95rem;
+    color: #b0b8d1;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.aboutCard strong {
+    color: #c0caf5;
+    font-size: 1.1rem;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 900px) {
+    .settingsContainer {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-height: 95vh;
+    }
+    
+    .leftColumn, .rightColumn {
+        max-height: none;
+    }
+    
+    .pageTitle {
+        font-size: 1.8rem;
+    }
+    
+    #backBtn {
+        top: 15px;
+        left: 15px;
+        padding: 10px 18px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .settingsContainer {
+        width: 95%;
+        gap: 15px;
+    }
+    
+    .card {
+        padding: 18px;
+    }
+    
+    .setting {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .setting label {
+        min-width: auto;
+    }
+}
