@@ -95,11 +95,59 @@ More synergies are planned for future versions.
 
 ---
 
-# 📸 Current Screens
+# 📸 Screenshots
 
-* Home Screen
-* Team Draft Screen
-* Battle Screen
+## 🏠 Home Screen
+
+![Home Screen](screenshots/cover.png)
+
+---
+
+## 🦸 Avatar Selection
+
+![Avatar Selection](screenshots/avatar.png)
+
+---
+
+## 🎮 Lobby
+
+![Lobby](screenshots/lobby.png)
+
+---
+
+## 🃏 Kwami Draft
+
+![Kwami Draft](screenshots/draft.png)
+
+---
+
+## 🃏 Kwami Draft
+
+![Kwami Draft](screenshots/kwami_index.png)
+
+---
+
+## 🃏 Kwami Draft
+
+![Kwami Draft](screenshots/kwami_index2.png)
+
+---
+
+## ⚔️ Battle
+
+![Battle](screenshots/battle.png)
+
+---
+
+## 🏆 Victory Screen
+
+![Victory Screen](screenshots/victory.png)
+
+---
+
+## ⚙️ Settings
+
+![Settings](screenshots/settings.png)
 
 ---
 
