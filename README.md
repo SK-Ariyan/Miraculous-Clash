@@ -111,7 +111,7 @@ More synergies are planned for future versions.
 
 ## 🎮 Lobby
 
-![Lobby](screenshots/lobby.png)
+![Lobby](screenshots/home.png)
 
 ---
 
@@ -123,7 +123,7 @@ More synergies are planned for future versions.
 
 ## 🃏 Kwami Draft
 
-![Kwami Draft](screenshots/kwami_index.png)
+![Kwami Draft](screenshots/kwami_index1.png)
 
 ---
 
