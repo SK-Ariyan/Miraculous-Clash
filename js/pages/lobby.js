@@ -39,7 +39,7 @@ document.getElementById("fav3").src = "../photos/Wayz.png";
 
 document.getElementById("playButton").addEventListener("click", () => {
 
-    goTo("kwami.html");
+    goTo("play.html");
 
 });
 

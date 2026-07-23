@@ -546,3 +546,107 @@ button:disabled {
         grid-template-columns: 1fr; /* Stack ability buttons on very small screens */
     }
 }
+
+#abilityGrid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:12px;
+
+    margin-top:15px;
+
+}
+
+#abilityGrid button{
+
+    height:65px;
+
+    font-size:18px;
+
+    border-radius:12px;
+
+}
+
+#abilityPanel{
+
+    display:contents;
+
+}
+
+.battleMove{
+
+    height:80px;
+
+    padding:8px;
+
+    white-space:normal;
+
+    word-break:break-word;
+
+    overflow:hidden;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+.battleMove{
+    height:90px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:4px;
+}
+
+.battleMove{
+    position:relative;
+}
+
+.moveReady{
+    position:absolute;
+    right:8px;
+    bottom:8px;
+}
+
+.abilityButton{
+
+    height:90px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    line-height:1.2;
+
+}
+
+.ready{
+
+    color:#3cff3c;
+
+}
+
+.selectedMove{
+
+    border:3px solid gold;
+
+    box-shadow:0 0 20px gold;
+
+    transform:scale(1.05);
+
+}
+

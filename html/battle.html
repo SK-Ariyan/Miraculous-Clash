@@ -85,15 +85,15 @@
 
     <div id="bottomPanel">
 
-        <div id="abilitySection">
+        <div id="abilityGrid">
 
-            <h2>Abilities</h2>
+    <button id="normalAttack" class="battleMove">
+        ⚔ Normal Attack
+    </button>
 
-            <div id="abilityPanel"></div>
+    <div id="abilityPanel"></div>
 
-            <button id="normalAttack">
-                ⚔ Normal Attack
-            </button>
+</div>
 
         </div>
 
@@ -134,10 +134,29 @@
 
 });
 </script>
-<script src="../js/transition.js"></script>
+<script src="../js/core/transition.js"></script>
 
-<script src="../js/heroes.js"></script>
-<script src="/js/battle.js"></script>
+<!-- Data -->
+<script src="../js/data/heroes.js"></script>
+<script src="../js/data/kwamis_data.js"></script>
+
+<!-- AI Core -->
+<script src="../js/ai/personalities.js"></script>
+<script src="../js/ai/AImemory.js"></script>
+<script src="../js/ai/combo_planner.js"></script>
+<script src="../js/ai/game_state.js"></script>
+<script src="../js/ai/ability_scores.js"></script>
+<script src="../js/ai/hero_brains.js"></script>
+<script src="../js/ai/battle_evaluator.js"></script>
+<script src="../js/ai/kill_detector.js"></script>
+<script src="../js/ai/threat_detector.js"></script>
+<script src="../js/ai/move_scorer.js"></script>
+<script src="../js/ai/combo_analyzer.js"></script>
+<script src="../js/ai/battle_AI.js"></script>
+
+<!-- Battle -->
+ <script src="../js/battle/effects.js"></script>
+<script src="/js/battle/battle.js"></script>
 </body>
 
 </html>

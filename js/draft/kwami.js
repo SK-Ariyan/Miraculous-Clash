@@ -35,258 +35,7 @@ document.getElementById("p2slot3")
 // ALL KWAMIS
 // ==========================
 
-const kwamis = [
 
-{
-name:"Tikki",
-image:"../photos/Tikki.jpg",
-hp:30,
-damage:3,
-speed:4,
-active:"Lucky Charm",
-effect:"Heal 40 HP and deal 30 damage",
-passive:"Heal 2 HP each turn",
-charge:6,
-luck:5
-},
-
-{
-name:"Plagg",
-image:"../photos/plagg.jpg",
-hp:10,
-damage:20,
-speed:40,
-active:"Cataclysm",
-effect:"Deal 80 damage and destroy the enemy shield",
-passive:"Deal 10 True Damage each turn",
-charge:3,
-luck:5
-},
-
-{
-name:"Wayz",
-image:"../photos/Wayz.png",
-hp:35,
-damage:1,
-speed:1,
-active:"Shell-ter",
-effect:"Deal 30 damage, gain 70 Shield, +20 Damage Reduction and an Extra Turn",
-passive:"Heal 5 HP each turn",
-charge:6,
-luck:5
-},
-
-{
-name:"Trics",
-image:"../photos/Trics.jpg",
-hp:15,
-damage:3,
-speed:5,
-active:"Mirage",
-effect:"Deal 40 damage, Heal 10 HP and gain an Extra Turn",
-passive:"None",
-charge:6,
-luck:5
-},
-
-{
-name:"Pollen",
-image:"../photos/Pollen.jpg",
-hp:15,
-damage:5,
-speed:4,
-active:"Venom",
-effect:"Deal 35 damage and Stun the enemy",
-passive:"None",
-charge:5,
-luck:5
-},
-
-{
-name:"Roaar",
-image:"../photos/Roaar.jpg",
-hp:10,
-damage:5,
-speed:3,
-active:"Clout",
-effect:"Deal 70 damage and gain an Extra Turn",
-passive:"None",
-charge:6,
-luck:5
-},
-
-{
-name:"Longg",
-image:"../photos/Longg.jpg",
-hp:20,
-damage:4,
-speed:3,
-active:"Elemental Burst",
-effect:"Deal 45 damage, Heal 10 HP, Deal 10 True Damage and gain Double Attack",
-passive:"None",
-charge:2,
-luck:5
-},
-
-{
-name:"Kaalki",
-image:"../photos/Kaalki.jpg",
-hp:20,
-damage:2,
-speed:5,
-active:"Voyage",
-effect:"Deal 40 damage, Break Shield and gain Dodge",
-passive:"Dodge the next incoming attack",
-charge:4,
-luck:5
-},
-
-{
-name:"Fluff",
-image:"../photos/Fluff.jpg",
-hp:15,
-damage:2,
-speed:5,
-active:"Burrow",
-effect:"Deal 30 damage and and immediately restore every kwami",
-passive:"None",
-charge:2,
-luck:5
-},
-
-{
-name:"Sass",
-image:"../photos/Sass.jpg",
-hp:20,
-damage:2,
-speed:2,
-active:"Second Chance",
-effect:"Deal 30 damage, Undo Last Damage and Reset Ally Cooldowns",
-passive:"None",
-charge:4,
-luck:5
-},
-
-{
-name:"Daizzi",
-image:"../photos/Daizzi.jpg",
-hp:25,
-damage:2,
-speed:3,
-active:"Jubilation",
-effect:"Heal 50 HP",
-passive:"Reduce incoming damage by 40",
-charge:5,
-luck:5
-},
-
-{
-name:"Mullo",
-image:"../photos/Mullo.jpg",
-hp:15,
-damage:4,
-speed:4,
-active:"Multitude",
-effect:"Deal 30 damage and your next attack hits twice",
-passive:"None",
-charge:2,
-luck:50
-},
-
-{
-name:"Nuroo",
-image:"../photos/Nuroo.jpg",
-hp:15,
-damage:3,
-speed:3,
-active:"Akumatize",
-effect:"Deal 40 damage, gain +40 Damage and Regenerate 10 HP for 2 turns",
-passive:"None",
-charge:4,
-luck:5
-},
-
-{
-name:"Orikko",
-image:"../photos/Orikko.jpg",
-hp:20,
-damage:2,
-speed:3,
-active:"Sublimation",
-effect:"Randomly gain Healing, Damage Buff, Shield, Dodge or Cooldown Reduction",
-passive:"None",
-charge:4,
-luck:5
-},
-
-{
-name:"Stomp",
-image:"../photos/Stomp.jpg",
-hp:40,
-damage:0,
-speed:1,
-active:"Resistance",
-effect:"Deal 30 damage, gain 30 Shield, Immunity and an Extra Turn",
-passive:"None",
-charge:6,
-luck:5
-},
-
-{
-name:"Tussoo",
-image:"../photos/Tussoo.jpg",
-hp:30,
-damage:2,
-speed:2,
-active:"Senti monster",
-effect:"Heal 10 HP and deal 60 damage",
-passive:"Heal 10 HP every 2 turns",
-charge:4,
-luck:5
-},
-
-{
-name:"Xuppu",
-image:"../photos/Xuppu.jpg",
-hp:15,
-damage:3,
-speed:4,
-active:"Uproar",
-effect:"Deal 60 damage and Disable Enemy Passive",
-passive:"None",
-charge:4,
-luck:5
-},
-
-{
-name:"Ziggy",
-image:"../photos/Ziggy.jpg",
-hp:25,
-damage:2,
-speed:2,
-active:"Genesis",
-effect:"Boost the next Ability",
-passive:"None",
-charge:3,
-luck:5
-},
-{
-    name:"Bark",
-    image:"../photos/Bark.jpg",
-    hp:30,
-    damage:5,
-    speed:10,
-    active:"Fetch",
-    effect:"Do the same move last kwami used doesn't matter from own team or opponent. do 20 damage if no move used yet",
-    passive:"None",
-    charge:4,
-    luck:5,
-
-    copiedAbility:null,
-    hasFetched:false
-}
-
-];
 
 // ==========================
 // CREATE CARDS
@@ -380,8 +129,66 @@ let bannedKwamis = [];
 // ==========================
 // UPDATE UI
 // ==========================
+// ==========================
+// ADVANCE TURN
+// ==========================
+let uiLocked = false;
 
+function lockUI(duration = 1500){
+
+    uiLocked = true;
+
+    setTimeout(()=>{
+
+        uiLocked = false;
+
+    }, duration);
+
+}
+function advanceTurn(){
+
+    // Draft finished
+    if(turn >= draftOrder.length){
+
+        localStorage.setItem("player1", JSON.stringify(player1Team));
+        localStorage.setItem("player2", JSON.stringify(player2Team));
+
+        if(window.bgMusic){
+            bgMusic.pause();
+        }
+
+        goTo("battle.html");
+        return;
+    }
+
+    updateTurnUI();
+
+    const mode = sessionStorage.getItem("mode");
+
+    if(mode != "ai")
+    return;
+
+// AI Ban
+if(phase == "ban" && turn == 1){
+
+    nextBanTurn();
+    return;
+
+}
+
+// AI Draft
+if(phase == "draft" && draftOrder[turn] == "p2"){
+
+    nextDraftTurn();
+    return;
+
+}
+
+}
 function updateTurnUI(){
+
+    if(uiLocked)
+    return;
 
     player1Title.classList.remove("active");
     player2Title.classList.remove("active");
@@ -439,29 +246,35 @@ function selectKwami(card,kwami){
 
     if(phase=="ban"){
 
-        bannedKwamis.push(kwami.name);
+    bannedKwamis.push(kwami.name);
 
-        card.classList.add("banned");
-        banSound.currentTime = 0;
-        banSound.play();
-        turn++;
+    card.classList.add("banned");
 
-        if(turn==2){
+    banSound.currentTime = 0;
+    banSound.play();
 
-            phase="draft";
-            turn=0;
-        }
+    turn++;
 
-        updateTurnUI();
-        return;
+    if(turn == 2){
+
+        phase = "draft";
+        turn = 0;
 
     }
+
+    advanceTurn();
+
+    return;
+
+}
 
     // -------------------------
     // PICK PHASE
     // -------------------------
 
-    if(draftOrder[turn]=="p1"){
+const currentPlayer = draftOrder[turn];
+
+if(currentPlayer=="p1"){
 
     player1Team.push(kwami);
 
@@ -481,20 +294,9 @@ updatePreviewStats();
 
 turn++;
 
-    if(turn>=draftOrder.length){
+advanceTurn();
 
-        localStorage.setItem("player1",JSON.stringify(player1Team));
-        localStorage.setItem("player2",JSON.stringify(player2Team));
-        if(window.bgMusic){
-    bgMusic.pause();
-}
-        goTo("battle.html");
-
-        return;
-
-    }
-
-    updateTurnUI();
+return;
 
 }
 
@@ -530,6 +332,89 @@ function updatePreviewStats(){
 
 }
 
+function nextDraftTurn(){
+    if(uiLocked)
+    return;
+
+    const thinkTime = 1200 + Math.random() * 800;
+
+    turnText.innerHTML = "🤖 Opponent is analyzing...";
+
+    setTimeout(()=>{
+
+        const aiPick = DraftAI.choosePick(player2Team);
+
+        if(!aiPick){
+            console.log("No AI Pick");
+            return;
+        }
+
+        const aiCard = [...document.querySelectorAll(".card")].find(card=>{
+
+            return Number(card.dataset.index) === kwamis.indexOf(aiPick);
+
+        });
+
+        if(!aiCard){
+            console.log("Card not found");
+            return;
+        }
+
+        turnText.innerHTML =
+        `🤖 Opponent selected ${aiPick.name}`;
+
+        setTimeout(()=>{
+
+            selectKwami(aiCard, aiPick);
+
+        },700);
+
+    },thinkTime);
+
+}
+
+function nextBanTurn(){
+
+    turnText.innerHTML = "🤖 Opponent is analyzing...";
+
+    const thinkTime = 1000 + Math.random() * 700;
+
+    setTimeout(()=>{
+
+        const aiBan = DraftAI.chooseBan(
+            kwamis,
+            bannedKwamis
+        );
+
+        if(!aiBan){
+            console.log("No AI Ban");
+            return;
+        }
+
+        const aiCard = [...document.querySelectorAll(".card")].find(card=>{
+
+            return Number(card.dataset.index) === kwamis.indexOf(aiBan);
+
+        });
+
+        if(!aiCard){
+            console.log("Ban card not found");
+            return;
+        }
+
+        turnText.innerHTML =
+        `🤖 Opponent banned ${aiBan.name}`;
+
+        setTimeout(()=>{
+
+            selectKwami(aiCard, aiBan);
+
+        },700);
+
+    },thinkTime);
+
+}
+
 
 
 
@@ -547,7 +432,12 @@ function updateSlots(){
     });
 
 }
+const personality = PersonalityManager.choose();
+
+
+
 
 
 updateTurnUI();
 updatePreviewStats();
+

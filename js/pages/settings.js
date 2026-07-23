@@ -1,6 +1,11 @@
+const seekBar = document.getElementById("musicSeek");
+const playBtn = document.getElementById("playBtn");
+const pauseBtn = document.getElementById("pauseBtn");
 // ==========================
 // PROFILE
 // ==========================
+
+
 
 const profileAvatar =
 document.getElementById("profileAvatar");
@@ -150,3 +155,63 @@ transitionCheck.onchange = () => {
     );
 
 };
+
+const prevBtn = document.getElementById("prevMusic");
+const nextBtn = document.getElementById("nextMusic");
+const seek = document.getElementById("musicSeek");
+
+playBtn.onclick = () => {
+
+    music.play().catch(()=>{});
+
+};
+
+pauseBtn.onclick = () => {
+
+    Music.pause();
+
+};
+
+prevBtn.onclick = () => {
+
+    Music.currentTime =
+    Math.max(0, Music.currentTime - 5);
+
+};
+
+nextBtn.onclick = () => {
+
+    Music.currentTime =
+    Math.min(
+        Music.duration,
+        Music.currentTime + 5
+    );
+
+};
+
+music.addEventListener("loadedmetadata",()=>{
+
+    seekBar.max = music.duration;
+
+});
+
+music.addEventListener("timeupdate",()=>{
+
+    seekBar.value = music.currentTime;
+
+});
+
+seekBar.oninput = ()=>{
+
+    music.currentTime = seekBar.value;
+
+};
+
+music.addEventListener("timeupdate",()=>{
+
+    localStorage.setItem(
+        "musicTime",
+        music.currentTime
+    );
+
+});

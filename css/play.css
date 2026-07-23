@@ -1,0 +1,81 @@
+body{
+
+    margin:0;
+    font-family:Poppins,sans-serif;
+
+    background:linear-gradient(135deg,#1b1b2f,#162447);
+
+    color:white;
+
+}
+
+.playContainer{
+
+    width:90%;
+    margin:auto;
+    padding-top:40px;
+
+}
+
+.pageTitle{
+
+    text-align:center;
+    font-size:45px;
+    margin-bottom:40px;
+
+}
+
+.modeContainer{
+
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+
+}
+
+.modeCard{
+
+    width:300px;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.08);
+
+    border:2px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(10px);
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.modeCard:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#ffd447;
+
+    box-shadow:0 0 25px rgba(255,212,71,.5);
+
+}
+
+.modeCard h2{
+
+    margin-top:0;
+
+    font-size:28px;
+
+}
+
+.modeCard p{
+
+    opacity:.8;
+
+    line-height:1.5;
+
+}

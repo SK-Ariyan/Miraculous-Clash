@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Play</title>
+
+<link rel="stylesheet" href="../css/play.css">
+<link rel="stylesheet" href="../css/transition.css">
+
+</head>
+
+<body>
+
+<div id="fadeScreen"></div>
+
+<button id="backBtn">⬅ Back</button>
+
+<div class="playContainer">
+
+    <h1 class="pageTitle">
+        🎮 SELECT GAME MODE
+    </h1>
+
+    <div class="modeContainer">
+
+        <!-- PASS & PLAY -->
+        <div class="modeCard" id="passPlayBtn">
+
+            <h2>👥 Pass & Play</h2>
+
+            <p>
+                Battle locally with your friend on the same device.
+            </p>
+
+            <button id="passPlayBtn">
+                Play
+            </button>
+
+        </div>
+
+        <!-- VS AI -->
+        <div class="modeCard" id="vsAiBtn">
+
+            <h2>🤖 VS AI</h2>
+
+            <p>
+                Challenge an intelligent AI opponent.
+            </p>
+
+            <button id="vsAiBtn">
+                Play
+            </button>
+
+        </div>
+
+        <!-- MULTIPLAYER -->
+        <div class="modeCard" id="multiplayerBtn">
+
+            <h2>🌐 Multiplayer</h2>
+
+            <p>
+                Battle players online.
+            </p>
+
+            <button id="multiplayerBtn">
+                Coming Soon
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+<audio id="musicPlayer" loop>
+
+    <source src="../sounds/BGMS.wav" type="audio/wav">
+
+</audio>
+<script src="../js/core/transition.js"></script>
+<script src="../js/core/music.js"></script>
+<script src="../js/core/navigation.js"></script>
+<script src="../js/game/gameState.js"></script>
+<script src="../js/pages/play.js"></script>
+
+</body>
+
+</html>
