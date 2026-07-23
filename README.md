@@ -1,189 +1,243 @@
-# 🐞 Miraculous Clash (V1)
+# 🐞 Miraculous Clash
 
-A turn-based strategy battle game inspired by the Miraculous universe.
+> A turn-based strategy game inspired by the Miraculous universe, where heroes, Kwamis, unique abilities, and intelligent AI battles come together in a tactical combat experience.
 
-Players build a team of five Kwamis, each with unique stats, active abilities, passive abilities, and powerful synergies. Every battle requires planning, timing, and strategy rather than luck alone.
-
-> **Current Version:** v1.1 (Core Gameplay Complete)
-
----
-
-# 🎮 Features
-
-## ⚔️ Turn-Based Combat
-
-* Normal attacks
-* Ability-based combat
-* Cooldown system
-* Speed determines the first turn
-* Extra turns
-* Double attacks
+![Version](https://img.shields.io/badge/Version-v3.0-red)
+![Status](https://img.shields.io/badge/Status-Active-success)
+![Platform](https://img.shields.io/badge/Platform-Web-blue)
+![Language](https://img.shields.io/badge/Made%20With-HTML%20%7C%20CSS%20%7C%20JavaScript-orange)
 
 ---
 
-## 🐾 18 Playable Kwamis
+## 📖 About
 
-Each Kwami has:
+**Miraculous Clash** is a browser-based turn-based battle game where players draft heroes and Kwamis, build unique strategies, and battle against AI or other players using tactical decision-making.
 
-* HP
-* Damage
-* Speed
-* Active Ability
-* Passive Ability
-* Cooldown
+Every Kwami possesses its own passive and active abilities, allowing countless team combinations and different playstyles.
 
-Current roster:
-
-* Tikki
-* Plagg
-* Wayz
-* Trixx
-* Pollen
-* Roaar
-* Longg
-* Kaalki
-* Fluff
-* Sass
-* Daizzi
-* Mullo
-* Nooroo
-* Orikko
-* Stompp
-* Tussoo
-* Xuppu
-* Ziggy
+The project is entirely developed using **Vanilla JavaScript**, without any game engine.
 
 ---
 
-# ✨ Battle Mechanics
+# ✨ Features
 
-Implemented mechanics include:
+## ⚔ Turn-Based Battle System
 
-* Healing
-* True Damage
-* Shields
-* Shield Break
-* Damage Buff
-* Damage Reduction
-* Regeneration
-* Dodge
-* Immunity
-* Freeze
-* Stun
-* Passive Abilities
-* Ability Boost
-* Floating Damage Numbers
-* Battle Log
-* Health Bars
-* Cooldown Reduction
+- Smooth turn rotation
+- Intelligent action queue
+- Status effect system
+- Battle log with typewriter animation
+- Pokémon-inspired battle pacing
+- Critical Hits
+- Dodge System
+- Double Attacks
+- Extra Turns
+- Cooldown System
 
 ---
 
-# 🤝 Team Synergies
+## 🦸 Hero Draft System
 
-Special combinations unlock unique effects.
+Choose your favorite hero before every battle.
 
-Current synergies include:
+Current Heroes include:
 
-* 🐞 Creation & Destruction
-* 🐉 Dragon Rider
-* 🎭 Chaos Illusion
-* 🛡 Guardian
-* ⏳ Time Loop
+- Ladybug
+- Cat Noir
+- Rena Rouge
+- Queen Bee
+- Carapace
+- Vesperia
+- Bunnyx
+- Argos
+- Ryuko
+- Purple Tigress
 
-More synergies are planned for future versions.
-
----
-
-# 📸 Current Screens
-
-* Home Screen
-* Team Draft Screen
-* Battle Screen
+...and many more.
 
 ---
 
-# 🚧 Planned Features (Version 2)
+## 🧚 Kwami System
 
-* Avatar Selection
-* Username Selection
-* VS Screen
-* Victory Screen
-* Defeat Screen
-* Improved Draft UI
-* Better Battle Animations
-* Sound Effects
-* Background Music
-* Improved Visual Effects
+Every Kwami has unique mechanics.
 
----
+Examples include:
 
-# 🌟 Future Plans
+- Healing
+- Shields
+- Damage Buffs
+- Damage Reduction
+- Freeze
+- Stun
+- Immunity
+- Dodge
+- Critical Enhancement
+- Passive Abilities
+- Ultimate Skills
 
-* More Kwamis
-* More Synergies
-* Ranked Battles
-* AI Opponent
-* Story Mode
-* Achievement System
-* Battle Statistics
-* Save Progress
-* Online Multiplayer (Long-term goal)
-* Mobile-friendly Interface
+Each battle encourages different team compositions.
 
 ---
 
-# ⚠️ Known Limitations
+## 🤖 AI Opponent
 
-Current version is focused on gameplay.
+The game features a custom-built AI that
 
-Still missing:
+- Evaluates battle state
+- Chooses abilities intelligently
+- Performs tactical attacks
+- Uses healing when appropriate
+- Plays similarly to a real player
 
-* Sound effects
-* Music
-* Avatar customization
-* Username system
-* Save files
-* AI opponents
-* Multiplayer
-* Polish animations
+---
 
-These will be added gradually.
+## 🎮 Controls
+
+### Mouse
+
+- Click Attack
+- Click Ability
+- Navigate menus
+
+### Keyboard
+
+- Arrow Keys → Select actions
+- Enter → Confirm action
+
+---
+
+## 🔊 Audio
+
+- Background Music
+- Volume Controls
+- Music Resume System
+- Auto Music Toggle
+
+---
+
+## ⚙ Settings
+
+- Master Volume
+- Music Volume
+- SFX Volume
+- Theme Support (Work in Progress)
+- Transition Toggle
+- Music Controls
+
+---
+
+# 📂 Project Structure
+
+```
+Miraculous-Clash/
+│
+├── css/
+├── hero/
+├── html/
+├── js/
+│   ├── core/
+│   ├── data/
+│   ├── ai/
+│   └── pages/
+│
+├── sounds/
+└── README.md
+```
 
 ---
 
 # 🛠 Built With
 
-* HTML5
-* CSS3
-* JavaScript (Vanilla)
+- HTML5
+- CSS3
+- JavaScript (ES6)
 
-No external frameworks are currently used.
+No external frameworks were used.
 
 ---
 
-# 📈 Project Status
+# 🚀 Current Progress
 
-**Version:** v1.1
+## ✅ Completed
 
-✅ Core gameplay complete
+- Hero Selection
+- Kwami Selection
+- Battle Engine
+- AI System
+- Passives
+- Status Effects
+- Draft Phase
+- Settings
+- Battle Log Animation
+- Keyboard Controls
+- Music System
 
-The combat engine, abilities, passive effects, synergies, cooldown system, and battle mechanics are stable after multiple test matches.
+---
 
-Future updates will mainly focus on improving presentation, user experience, and adding new content.
+## 🔄 Planned
+
+- Story Mode
+- Ranked Battles
+- Online Multiplayer
+- Save System
+- Unlockable Heroes
+- Ultimate Cutscenes
+- Advanced AI Personalities
+- Achievement System
+
+---
+
+# 📸 Screenshots
+
+*(Add screenshots here)*
+
+Example:
+
+```
+screenshots/
+    lobby.png
+    battle.png
+    draft.png
+```
+
+---
+
+# 🎯 Future Goals
+
+The goal of Miraculous Clash is to become a complete browser-based tactical game featuring:
+
+- Rich strategic gameplay
+- Competitive AI
+- Professional UI
+- Smooth animations
+- Large hero roster
+- Multiple game modes
 
 ---
 
 # 👨‍💻 Developer
 
-Created by **SK Ariyan**
+**Sk Ariyan**
 
-This project is a personal learning journey to improve skills in JavaScript, game logic, UI design, and software development while building a complete strategy game from scratch.
+Computer Science & Technology Student
+
+GitHub:
+https://github.com/SK-Ariyan
+
+---
+
+# 📜 License
+
+This project is created for educational and portfolio purposes.
+
+Miraculous characters and related intellectual property belong to their respective copyright holders.
+
+This is a fan-made non-commercial project.
 
 ---
 
 # ⭐ Support
 
-If you like this project, consider giving it a ⭐ on GitHub.
+If you enjoyed this project, consider giving it a ⭐ on GitHub.
 
-Feedback, suggestions, and bug reports are always welcome.
+It really helps!
